@@ -1,0 +1,9 @@
+/.idea
+node_modules
+.vscode
+build
+server
+dist
+debug.log
+**/debug.log
+nul

@@ -1,0 +1,31 @@
+name: build-ci
+
+on: [pull_request, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.x'
+      - name: Install libraries
+        id: setuptools
+        run: npm install
+        continue-on-error: true
+      - name: Build all files
+        id: buildall
+        run: npm run build
+        continue-on-error: false
+      - name: Check Failures
+        if: ${{ failure() }}
+        run: echo "Build failed"
+        continue-on-error: false
+      - name: Publish build
+        uses: actions/upload-artifact@v4
+        with:
+          name: index.html.gz
+          path: dist/index.html.gz
+          compression-level: 0

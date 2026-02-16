@@ -1,0 +1,85 @@
+.panel-dashboard,
+.panel-interface,
+.panel-features {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.macro-buttons-panel {
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.macro-buttons-panel button {
+    flex: 1 1 20% !important;
+    margin: 10px !important;
+}
+
+.panel {
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column;
+    max-height: 600px;
+    height: auto !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    margin: 5px;
+}
+
+.panel {
+    background-color: #fff;
+    color: #000;
+}
+
+.panel-body-dashboard,
+.panel-body-interface,
+.panel-body-features {
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column;
+}
+.panel .navbar,
+.panel .navbar-section {
+    background: #f1f1fc;
+    color: #005b96;
+}
+
+.panel .panel-body.terminal {
+    height: 300px;
+    min-height: 300px !important;
+}
+
+.panel-extra-content {
+    height: auto !important;
+    min-height: 550px !important;
+}
+
+.panel-item {
+    flex: 0 1 auto;
+}
+
+.files-list-footer {
+    padding: 0.2rem 0.8rem !important;
+}
+
+.column {
+    .panel {
+        height: 100%;
+        box-shadow: 0px 0px 14px -5px rgba(0, 0, 0, 0.05);
+    }
+}
+
+.loading-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
