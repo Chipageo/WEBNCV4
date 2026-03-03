@@ -11,10 +11,12 @@ export default defineConfig({
   server: {
     proxy: {
       '/command': 'http://localhost:8080',
-      '/config':  'http://localhost:8080',
-      '/files':   'http://localhost:8080',
-      '/upload':  'http://localhost:8080',
+      '/config': 'http://localhost:8080',
+      '/files': 'http://localhost:8080',
+      '/upload': 'http://localhost:8080',
       '/updatefw': 'http://localhost:8080',
+      '/preferences.json': 'http://localhost:8080',
+      '/sd': 'http://localhost:8080',
     },
   },
   css: {
